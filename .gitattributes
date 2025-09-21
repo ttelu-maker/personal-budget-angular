@@ -1,0 +1,10 @@
+# Store all files in the repo with LF line endings (cross-platform safe)
+* text=auto eol=lf
+
+# Shell scripts must be LF on macOS/Linux
+*.sh     text eol=lf
+*.bash   text eol=lf
+
+# Windows-only scripts can stay CRLF
+*.bat    text eol=crlf
+*.cmd    text eol=crlf

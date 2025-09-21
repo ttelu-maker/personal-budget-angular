@@ -1,0 +1,51 @@
+/* page container centered */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* two columns, aligned + centered as a block */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+  justify-items: stretch;   /* each card fills its column */
+  margin: 24px 0 40px;
+}
+
+/* card look for pb-article and chart articles */
+pb-article,
+
+/* chart titles */
+.chart-card h1 { margin: 0 0 12px; }
+
+/* fixed visual height for both charts */
+.chart-box {
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* make canvas/D3 fill the box */
+.chart-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+.chart-box .donut {
+  width: 100%;
+  height: 100%;
+}
+.chart-box .donut svg {
+  width: 75% !important;
+  height: 75% !important;
+}
+
+/* responsive: stack to 1 column */
+@media (max-width: 980px) {
+  .features-grid { grid-template-columns: 1fr; }
+  .chart-box     { height: 320px; }
+}
