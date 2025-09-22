@@ -1,10 +1,12 @@
-# Store all files in the repo with LF line endings (cross-platform safe)
+# Keep LF in the repo for all text files
 * text=auto eol=lf
 
-# Shell scripts must be LF on macOS/Linux
-*.sh     text eol=lf
-*.bash   text eol=lf
-
-# Windows-only scripts can stay CRLF
-*.bat    text eol=crlf
-*.cmd    text eol=crlf
+# Treat images and other binaries as binary (no line-ending conversion)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.svg binary

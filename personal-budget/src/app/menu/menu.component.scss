@@ -1,0 +1,67 @@
+/* src/app/menu/menu.component.scss */
+
+/* Scope everything to this component */
+:host {
+  display: block;
+}
+
+/* The bar itself */
+nav {
+  background: #4b5583;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.08);
+}
+
+/* Optional: center content to match the site max width
+   If your template doesn't have this wrapper, either add:
+     <nav><div class="inner"><ul>...</ul></div></nav>
+   or remove this block. */
+nav .inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* List of links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 12px 24px; /* If you use .inner, move this padding there and set to 0 here */
+}
+
+/* Links */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  transition: text-decoration 0.15s ease;
+}
+
+/* Active link (RouterLinkActive adds .active) */
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Hover/focus for accessibility */
+nav a:hover,
+nav a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  nav .inner {
+    padding: 10px 16px;
+  }
+  nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 10px 16px; /* if no .inner */
+  }
+}

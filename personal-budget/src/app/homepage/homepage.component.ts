@@ -5,7 +5,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ArticleComponent } from '../article/article.component';
 // If you really have a breadcrumbs component, keep this next import;
 // otherwise delete the import and the <pb-breadcrumbs> tag from the HTML.
-// import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
+import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
 
 import Chart from 'chart.js/auto';
 import * as d3 from 'd3';
@@ -26,7 +26,7 @@ const COLOR_BY_TITLE: Record<string, string> = {
 @Component({
   selector: 'pb-homepage',
   standalone: true,
-  imports: [CommonModule, ArticleComponent /*, BreadcrumbsComponent */],
+  imports: [CommonModule, ArticleComponent, BreadcrumbsComponent],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss']
 })

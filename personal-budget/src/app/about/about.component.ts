@@ -1,11 +1,10 @@
+// src/app/about/about.component.ts
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'pb-about',
-  imports: [],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  standalone: true,
+  template: `<h1>About works!</h1>`,
 })
-export class AboutComponent {
+export class AboutComponent {}
 
-}

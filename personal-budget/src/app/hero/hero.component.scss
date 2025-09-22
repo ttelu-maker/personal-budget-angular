@@ -1,0 +1,21 @@
+:host { display: block; }
+
+.hero {
+  /* color shows even if image fails */
+  background-color: #b4c6f0;
+
+  /* pick ONE of these lines:
+     a) root-relative (safe for dev): */
+  background-image: url('/assets/bg.png');
+
+  /* b) app-relative (safer if app is deployed under a sub-path):
+  background-image: url('assets/images/bg.png'); */
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 400px;
+
+  min-height: 350px;
+  padding-top: 40px;
+  text-align: center;
+}
